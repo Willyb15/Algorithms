@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hacker Track Week 3</title>
+</head>
+<body>
+<script type="text/javascript"> 
+
+function oddNumbers(arr) {
+   willsArray = [];
+   for (var i = 0; i < 50; i++) {
+       if (i % 2 === 1) {
+           willsArray.push(i);
+       }
+   }
+   return willsArray; 
+}
+var w = oddNumbers();
+
+console.log(w);
+
+
+function squareVal (arr){
+    var sqarr = [];
+    for(var i = 0; i < arr.length; i++){
+         sqarr.push(arr[i] * arr[i]);
+    }
+    return sqarr;
+}
+
+	var willsArray = [1,5,10,-2];
+	
+	console.log(squareVal(willsArray));
+	
+	var willsArray = [2, -10, 6, 20, 8, -15, -25];
+	
+	console.log(squareVal(willsArray));
+
+</script>
+</body>
+</html>
