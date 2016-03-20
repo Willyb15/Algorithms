@@ -65,6 +65,35 @@ console.log(fizzBuzz());
 // The prime factors of 13195 are 5, 7, 13 and 29.
 // ANSWER - 6857
 // What is the largest prime factor of the number 600851475143 ?
+
+  function isPrime(num) {
+       if(num < 2) return false;
+       for (var i = 2; i < num; i++) {
+           if(num%i==0)
+            return false;
+       }
+      return true;
+    }
+
+
+
+    function primeFactors (number){
+       for (var i=2; i<= number/i; i++){
+           console.log("i=" + i + " number=" + number);
+       
+       while(number %i === 0){
+           number = number/i;
+            console.log("Factor= "+ i);
+        }
+        }
+        if(number>1){
+            console.log("Last Factor=" + number);
+        }
+    }  
+    primeFactors(600851475143);
+
+
+    
 // ----------------------------------------
 // Revisited Challenge
 // Complete the doSearch function so that it implements a binary search, following the pseudo-code below (this pseudo-code was described in the previous article):
