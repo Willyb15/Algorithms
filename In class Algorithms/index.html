@@ -93,7 +93,7 @@ var search = function(array, targetValue){
         }else if(array[guess]<targetValue){ 
             min = guess + 1
         }else{
-            guess = max - 1
+            max = guess - 1
         }
     }
     return -1;
