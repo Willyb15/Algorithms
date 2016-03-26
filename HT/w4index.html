@@ -1,0 +1,28 @@
+<script type="text/javascript">
+
+function ageCalc(seconds){
+	var earth = "Earth Age: " + (seconds/31557600) + " Solar Revolutions";
+	var mercury = "Mercury Age: " + (seconds)  / (31557600*.2408467);
+	var venus = "Venus Age: " + (seconds) / (31557600*.61519726);
+	var mars = "Mars Age: " + (seconds) / (31557600*1.8808158);
+	var jupiter = "Jupiter Age: " + (seconds) / (31557600*11.862615);
+	var saturn = "Saturn Age: " + (seconds) / (31557600*29.447498);
+	var uranus = "Uranus Age: " + (seconds) / (31557600*84.016846);
+	var neptune = "Neptune Age: " + (seconds) / (31557600*164.79132);
+	
+
+	 console.log(earth);
+	 console.log(mercury);
+	 console.log(venus);
+	 console.log(mars);
+	 console.log(jupiter);
+	 console.log(saturn);
+	 console.log(uranus);
+	 console.log(neptune);
+	 return;
+
+};
+
+console.log(ageCalc(1000000000));
+
+	</script>

@@ -1,0 +1,53 @@
+<!-- Make an array.
+Fill the array with objects.
+Make the objects using a constructor.
+The objects should be any 10 US cities.
+The objects should have the following properties:
+- population
+- state
+- sq. feet
+- pop/density
+- method that takes an argument and prints to the screen if the population is larger or smaller.
+
+Also try...
+Make the method a prototype -->
+<script type="text/javascript">
+	
+	function City(name, population, state, sqMiles, popDensity){
+		this.name = name;
+		this.population = population;
+		this.state = state;
+		this.sqMiles = sqMiles;
+		this.popDensity = popDensity
+	}
+
+	
+	City.prototype.calcPop = function(testPop){
+		if(testPop > this.population){
+			alert("The city of " + this.name + " has fewer than " + testPop + ' people.');
+		}else{
+			alert("The city of " + this.name + " has fewer than " + testPop + ' people.');
+		}
+	}
+
+	var cities = [];
+
+	cities.push(new City('Atlanta', 447841,'GA',134, 3360));
+	cities.push(new City('NYC', 8491079,'NY',127857, 3360));
+	cities.push(new City('San Fran', 800000,'CA',1000, 2000));
+	cities.push(new City('Seattle', 700000,'WA',2000, 1000));
+
+	console.log(cities);
+
+	console.log(cities[0].calcPop(10000));
+
+	for(i=0; i<cities.length; i++){
+		console.log(cities[i].caclPop(500000));
+	}
+
+	// console.log(cities);
+
+
+
+
+</script>
