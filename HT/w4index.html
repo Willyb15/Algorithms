@@ -1,16 +1,19 @@
 <script type="text/javascript">
 
-function ageCalc(seconds){
-	var earth = "Earth Age: " + (seconds/31557600) + " Solar Revolutions";
-	var mercury = "Mercury Age: " + (seconds)  / (31557600*.2408467);
-	var venus = "Venus Age: " + (seconds) / (31557600*.61519726);
-	var mars = "Mars Age: " + (seconds) / (31557600*1.8808158);
-	var jupiter = "Jupiter Age: " + (seconds) / (31557600*11.862615);
-	var saturn = "Saturn Age: " + (seconds) / (31557600*29.447498);
-	var uranus = "Uranus Age: " + (seconds) / (31557600*84.016846);
-	var neptune = "Neptune Age: " + (seconds) / (31557600*164.79132);
-	
 
+function ageCalc(seconds){
+	var intro = "Solar revolutions by planet for " + seconds + " seconds:" 
+	var earth = "Earth: " + (seconds/31557600);
+	var mercury = "Mercury: " + (seconds)  / (31557600*.2408467);
+	var venus = "Venus: " + (seconds) / (31557600*.61519726);
+	var mars = "Mars: " + (seconds) / (31557600*1.8808158);
+	var jupiter = "Jupiter: " + (seconds) / (31557600*11.862615);
+	var saturn = "Saturn: " + (seconds) / (31557600*29.447498);
+	var uranus = "Uranus: " + (seconds) / (31557600*84.016846);
+	var neptune = "Neptune: " + (seconds) / (31557600*164.79132);
+	var outro = "An earthing age of" + Math.round(parseInt(earth)*100/100) + " years is equal to" + Math.round(venus*100)/100 +  "earth years on Venus and" + Math.round(neptune*100)/100 + "earth years on Neptune."
+	
+	 console.log(intro);
 	 console.log(earth);
 	 console.log(mercury);
 	 console.log(venus);
@@ -19,10 +22,11 @@ function ageCalc(seconds){
 	 console.log(saturn);
 	 console.log(uranus);
 	 console.log(neptune);
-	 return;
+	 console.log(outro);
+	
 
 };
 
-console.log(ageCalc(1000000000));
+ageCalc(946707780);
 
 	</script>
