@@ -3,29 +3,41 @@
 
 function ageCalc(seconds){
 	var intro = "Solar revolutions by planet for " + seconds + " seconds:" 
-	var earth = "Earth: " + (seconds/31557600);
-	var mercury = "Mercury: " + (seconds)  / (31557600*.2408467);
-	var venus = "Venus: " + (seconds) / (31557600*.61519726);
-	var mars = "Mars: " + (seconds) / (31557600*1.8808158);
-	var jupiter = "Jupiter: " + (seconds) / (31557600*11.862615);
-	var saturn = "Saturn: " + (seconds) / (31557600*29.447498);
-	var uranus = "Uranus: " + (seconds) / (31557600*84.016846);
-	var neptune = "Neptune: " + (seconds) / (31557600*164.79132);
-	var outro = "An earthing age of" + Math.round(parseInt(earth)*100/100) + " years is equal to" + Math.round(venus*100)/100 +  "earth years on Venus and" + Math.round(neptune*100)/100 + "earth years on Neptune."
-	
-	 console.log(intro);
-	 console.log(earth);
-	 console.log(mercury);
-	 console.log(venus);
-	 console.log(mars);
-	 console.log(jupiter);
-	 console.log(saturn);
-	 console.log(uranus);
-	 console.log(neptune);
-	 console.log(outro);
+	var earth = "Earth:";
+	var earthAge = (seconds/31557600);
+	var mercury = "Mercury:";
+	var mercAge = (seconds) / (31557600*.2408467);
+	var venus = "Venus:";
+	var venusAge =  (seconds) / (31557600*.61519726);
+	var mars = "Mars:"; 
+	var marsAge = (seconds) / (31557600*1.8808158);
+	var jupiter = "Jupiter:";
+	var jupAge = (seconds) / (31557600*11.862615);
+	var saturn = "Saturn:";
+	var satAge = (seconds) / (31557600*29.447498);
+	var uranus = "Uranus:"; 
+	var uranusAge = (seconds) / (31557600*84.016846);
+	var neptune = "Neptune:"; 
+	var neptuneAge = (seconds) / (31557600*164.79132);
+	var outro = "An earthing aged " + Math.round(earthAge*100) /100 + " years is equalivalent to " + Math.round(venusAge*100)/100 +  " solar revolutions on Venus and " + Math.round(neptuneAge*100) /100 + " solar revolutions on Neptune."
 	
 
+	 console.log(intro);
+	 console.log(earth, earthAge);
+	 console.log(mercury, mercAge);
+	 console.log(venus, venusAge);
+	 console.log(mars, marsAge);
+	 console.log(jupiter, jupAge);
+	 console.log(saturn, satAge);
+	 console.log(uranus, uranusAge);
+	 console.log(neptune, neptuneAge);
+	 console.log(outro);
+
+
 };
+
+
+ageCalc(1000000000);
 
 ageCalc(946707780);
 
