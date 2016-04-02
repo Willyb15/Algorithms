@@ -1,0 +1,89 @@
+<script type="text/javascript">
+ 
+ // Given an array x (e.g. [1,5, 10, -2]), create an algorithm (sets of instructions) that replaces any negative number with the value of 0.When the program is done x should have no negative values (e.g. [1, 5, 10, 0]).
+	
+	function noNeg(arr){
+		var noNegArray = [];
+		for (var i=0;i<arr.length;i++){
+			if(arr[i]<0){
+				noNegArray.push(arr[i]=0);
+			}else{
+				noNegArray.push(arr[i]);
+			}
+		}
+		return noNegArray;
+	}
+
+	willsArray = [1,-2,3,4,5,-2,-4]; 
+	console.log(noNeg(willsArray));	
+
+// Given an array x (e.g. [1,5, 10, -2]), create an algorithm (sets of instructions) that returns an array with the max, min, and average values ([max, min, avg]. ex [0,2,4] should return [4,0,2]).
+
+	function maxMinAvg(arr){
+		var newArray = [];
+		var max = arr[0];
+   		var min = arr[0];
+   		var avg = 0;
+   		var sum = 0;
+  	 	for(var i=0; i<arr.length; i++){
+   			if (arr[i] > max){
+				max = arr[i];
+			
+			}else if(arr[i] < min){
+				min = arr[i];
+			}
+			avg = (sum += arr[i])/(arr.length);
+				
+		}
+		newArray.push(max);
+		newArray.push(min);
+		newArray.push(avg);
+		return newArray;
+   	} 
+   
+   	willsArray = [90,88,95,78,85,92,93,84];
+   	console.log(maxMinAvg(willsArray));
+   	willsArray = [1,-2,3,4,5,-2,-4]; 
+   	console.log(maxMinAvg(willsArray));
+
+// Write a function that takes an array as an argument and return an array with the first and last values swapped. The array will have a minimum length of 2 (ex. [1,5,10,-2] should return [-2,5,10,1]).
+   	
+   	function swap(arr) {
+		newArray = [];
+		for(var i=0; i<arr.length; i++){
+			newArray.push(arr[i]);
+		}
+		newArray[0] = newArray[arr.length-1];
+		newArray[arr.length-1] = arr[0];
+		return newArray; 
+	}
+	
+	willsArray = [1,2,3,4,5];
+	console.log(swap(willsArray));
+	
+	willsArray = [1,2,3,4,5,6,7,8,9,10,11,12];
+	console.log(swap(willsArray));
+
+// Write a function that takes an array of numbers and replaces any number that's negative to a string called 'DigitalCrafts'. For example if array = [-1,-3,2] should return ['DigitalCrafts', 'DigitalCrafts', 2].
+
+	function numToStr(arr) {
+		var newArray = [];
+		for(var i=0; i<arr.length; i++){
+	 		if(arr[i]<0){
+	  			arr[i] = "DigitalCrafts";
+	  		}
+	  		newArray.push(arr[i]);
+		}
+	   	return newArray; 
+	}	
+	
+	willsArray = [-1,-3,2];
+	console.log(numToStr(willsArray));
+
+	willsArray = [-1,2,3,-4,5,-6,-7,8,9,10,-11,12];
+	console.log(numToStr(willsArray));
+	
+	willsArray = [-1,2,3,-4,5];
+	console.log(numToStr(willsArray));
+   	
+</script>

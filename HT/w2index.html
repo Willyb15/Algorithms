@@ -6,13 +6,13 @@
 	function iterArr(arr) {
 	   //Place your code here 
 	   var sum = 0;
-	   for (var i=0; i<willsArray.length;i++){
-	   sum += willsArray[i];
+	   for (var i=0; i<arr.length;i++){
+	   		sum += arr[i];
 	   }
 	   return sum;
-	   }
+	}
 
-	willsArray = [0]
+	willsArray = [0];
 	console.log(iterArr(willsArray));
 	willsArray = [1,2,5];
 	console.log(iterArr(willsArray));
@@ -21,14 +21,32 @@
 	willsArray = [0,1,2,3,4,5,6];
 	console.log(iterArr(willsArray));	
 
+	// solved it this way week 6
+sampArray = [1,2,3,4,5,6,7,8,9,10];
+
+function findMax(arr){
+	 // set the index toou arr[i]. If you set max = 0,doesnt work for every occastion. Same with a min value
+	var max = arr[0];
+	for (var i=0; i<arr.length; i++){
+		if (arr[i] > max){
+			max = arr[i];  
+		}	
+	}
+	console.log(max);
+	return max;
+	
+}
+findMax(sampArray);
+
+
 //b) Given an array with multiple values (e.g. [-3,3,5,7]), write a function that returns the maximum number in the array.(The best way to do this is to have the computer go through each number, one at a time, and to update the value in a variable called 'maximum' (or whatever you want to name the variable); imagine if we gave you no number and asked you what a maximum number is. What would you say? Say the first number we gave you was -3 and asked you what a maximum number is. What would you say? Say the next number we gave you was 3 and asked you again what a maximum number now is. What would you say? Have the computer imitate this behavior of updating the maximum number as you iterate through each number in the array). Again, you're not to use any of the pre-built functions.
 
 	function findMax(arr) {
 	    //Place your code here 
 		var max = 0;
-		for(var i=0; i<willsArray.length; i++){
-		    if (willsArray[i] > max){
-		        max = willsArray[i];
+		for(var i=0; i<arr.length; i++){
+		    if (arr[i] > max){
+		        max = arr[i];
 		        }
 		    }
 		return max;
@@ -47,8 +65,8 @@
 	 //Place your code here 
 	 var sum = 0;
 	 var avg = 0;
-	 for(var i = 0; i<willsArray.length; i++){
-	 	avg = (sum += willsArray[i])/(willsArray.length);
+	 for(var i = 0; i<arr.length; i++){
+	 	avg = (sum += arr[i])/(arr.length);
 	 } 
 	 return avg; 
 	}
@@ -61,6 +79,23 @@
 	console.log(findAvg(willsArray));
     willsArray = [0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,1,0,0,0,0];
 	console.log(findAvg(willsArray));
+
+// solved this way in week 6. old way, you calculate avg every iteration of loop when you only have to divide by arr.length Once
+
+var testArray = [1,3,5,7,20];
+
+function avgArr(arr){
+	var sum = 0;
+	var avg = 0;
+	for (var i=0; i<arr.length; i++){
+		sum += arr[i];
+	}
+	avg = (sum/arr.length);
+	return avg;
+}
+
+avgArr(testArray);
+
 
 	function findAvgPlus() {
 		var a = findAvg(arr) + 5;
