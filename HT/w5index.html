@@ -46,6 +46,32 @@
    	willsArray = [1,-2,3,4,5,-2,-4]; 
    	console.log(maxMinAvg(willsArray));
 
+
+// solved this way on 4/3 Thought it was more efficient to calculate sum inside loop, then calculate avg after the loop has executed. see line 67/69
+
+function maxMinAvg(arr){
+	var tempArray = [];
+	var max= arr[0];
+	var min = arr[0];
+	var sum = 0;
+	var avg =0;
+	for(var i=0;i<arr.length;i++){
+		if(arr[i]>max){
+			max = arr[i];
+		}
+		else if(arr[i]<min){
+			min = arr[i];
+		}
+		sum+=arr[i];
+	}
+		avg =(sum/arr.length);
+		tempArray.push(max,min,avg);
+		return tempArray;
+}
+var array = [77,78,95,90,92,85,84];
+
+maxMinAvg(array);
+
 // Write a function that takes an array as an argument and return an array with the first and last values swapped. The array will have a minimum length of 2 (ex. [1,5,10,-2] should return [-2,5,10,1]).
    	
    	function swap(arr) {
@@ -63,6 +89,16 @@
 	
 	willsArray = [1,2,3,4,5,6,7,8,9,10,11,12];
 	console.log(swap(willsArray));
+
+	// sloved this way on 4/3 didnt need a loop or new array;
+	function swap(arr){
+		var first = arr[0];
+		var last = arr[arr.length-1];
+		arr[0] = last;
+		arr[arr.length-1] = first;
+		return arr;
+}
+
 
 // Write a function that takes an array of numbers and replaces any number that's negative to a string called 'DigitalCrafts'. For example if array = [-1,-3,2] should return ['DigitalCrafts', 'DigitalCrafts', 2].
 
@@ -85,5 +121,20 @@
 	
 	willsArray = [-1,2,3,-4,5];
 	console.log(numToStr(willsArray));
+
+
+	// solved this way 4/3. didnt need to push to new array
+	function toString(arr){
+	for(var i = 0; i<arr.length;i++){
+		if(arr[i]<0){
+			arr[i] = "Digitcal Crafts";
+		}
+	}
+	return arr;
+}
+
+var array = [1,2,3,-4,5,-6,7,8];
+
+toString(array);
    	
 </script>
