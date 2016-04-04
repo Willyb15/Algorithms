@@ -26,12 +26,12 @@ console.log(total);
 // By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 function fibSum(){
     var sum = 0;
-    var fib = [0, 1];
+    var fib = [1, 2];
     
     for (var i = 2; i < 35; i++) {
         fib[ i ] = fib[ i - 1 ] + fib[ i - 2 ];
            
-        if(fib[i]%2==0 && fib[i]<4000000){
+        if(fib[i]%2===0 && fib[i]<4000000){
             sum = sum + fib[i];
         }    
         
@@ -47,11 +47,11 @@ console.log(fibSum());
 // Print out the numbers 1-100, if the number is divisible by 3, print "Fizz" istead of the number. If it's divisible by 5, print "Buzz" instead of the number. If it's divisibly by both, print "FizBuzz". -->
 function fizzBuzz(){
     for (var i = 0; i<55; i++){
-        if(i%3 == 0 && i%5 ==0){
-            console.log('FizzBuzz')
-        }else if(i%3 == 0){
+        if(i%3 === 0 && i%5 ===0){
+            console.log('FizzBuzz');
+        }else if(i%3 === 0){
             console.log("Fizz");
-        }else if(i%5==0){
+        }else if(i%5===0){
             console.log("Buzz");
         }else
             console.log(i);
