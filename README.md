@@ -1,5 +1,5 @@
-# Algorithms, Practice Problems, and Objects used to Practice JavaScript Skillz.
+# Algorithms, Sample Problems, and Objects used to Practice JavaScript Skillz.
 ### Algorithms discussed in Digital Crafts classroom others found on the interweb.
-### Object practice using Constructors
+### Practice using Constructors to mass produce Objects
 ###Weekly Digital Crafts "Hacker Track" Code Challenges stored in the "HT" file. 
 
