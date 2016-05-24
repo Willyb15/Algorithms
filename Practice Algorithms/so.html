@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div ng-app="app" ng-controller="test">
+      <table>
+        <tr ng-repeat="name in names track by $index"> 
+            <td data-usescope=""> {{name}} </td>
+        </tr>
+      </table>
+    </div>
+    <script   
+      src="https://code.jquery.com/jquery-2.2.3.min.js"   
+      integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   
+      crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript">
+      var app = angular.module('app', []);
+
+      app.controller('test', function($scope) {
+        $scope.names = ["Test1","Test2"];
+      });
+
+      app.directive('usescope',
+        function ($compile) {
+          return {
+            link: function (scope, element, attrs) {
+                element.click(function(e) {
+                    e.preventDefault();
+                    element.appendchild($compile('<span> Hello {{name}} </span>')(scope));
+                });
+            }
+        };
+      });
+
+    </script>
+  </body>
+</html>

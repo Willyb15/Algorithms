@@ -223,3 +223,64 @@ for(var i=1901; i<=2000; i++){
 }
 
 console.log("answer:" + sum);
+
+
+// Project Euler #31 Coins Problem
+//  In England the currency is made up of pound, £, and pence, p, and there are eight coins in general circulation:
+// 1p, 2p, 5p, 10p, 20p, 50p, £1 (100p) and £2 (200p).
+// You can make 2 pounds in the following way: 1×£1 + 1×50p + 2×20p + 1×5p + 1×2p + 3×1p
+// How many different ways can you make £2 using any number of coins?
+// Answer: 73682
+// this is the brute force "iterative" way 
+var makeChange = function(total) {
+
+  var coins = [1,2,5,10,20,50,100,200];
+  var count = 0;
+
+  for (var a = total; a >= 0; a -= coins[coins.length-1]) {
+    for (var b = a; b >= 0; b -= coins[coins.length-2]) {
+      for (var c = b; c >= 0; c -= coins[coins.length-3]) {
+        for (var d = c; d >= 0; d -= coins[coins.length-4]) {
+          for (var e = d; e >= 0; e -= coins[coins.length-5]) {
+            for (var f = e; f >= 0; f -= coins[coins.length-6]) {
+              for (var g = f; g >= 0; g -= coins[coins.length-7]) {
+                count++;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  return count;
+};
+
+// Solve recursively!!
+
+makeChange(200);
+var makeChange = function(total){
+  var count = 0;
+  var coins = [1, 2, 5, 10, 20, 50, 100, 200];
+
+  var changer = function(index, value){
+
+    var currentCoin = coins[index];
+
+    if( index === 0){
+      if( value % currentCoin === 0){
+        count++;
+      }
+      return;
+    }
+
+    while( value >= 0 ){
+      changer(index-1, value);
+      value -= currentCoin;
+    }
+  };
+  changer(coins.length-1, total);
+  return count;
+};
+
+makeChange(200);
+
