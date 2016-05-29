@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="movieApp">
+	<head>
+		<title>Angular Movie</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+		
+		<script src="controller.js"></script>
+	</head>
+	
+	<body ng-controller="movieController">
+		{{message}}
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<form id="movie-form" ng-submit="movieSearch()">
+					<input ng-model="searchTerm" type="text" id="searchText" class="typeahead" placeholder="Search for...">
+					<input type="submit" class="btn btn-warning" value="search">
+					<select id="searchFilter" ng-model="selected">
+						<option ng-selected="movie" value="movie">Movie</option>
+						<option ng-selected="actor" value="person">Actor</option>
+						<option ng-selected="tv" value="tv">TV</option>
+						<option ng-selected="multi" value="multi">All</option>
+					</select>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3 movie-poster" ng-repeat="movie in movieData">
+				<img ng-src='{{imagePath}}{{movie.poster_path}}'>
+			</div>
+		</div>
+	</body>
+</html>
