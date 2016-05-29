@@ -90,4 +90,4 @@ console.log(fizzBuzz());
     }  
     primeFactors(600851475143);
 ```
-
+####Added the movie app but build it with agular
