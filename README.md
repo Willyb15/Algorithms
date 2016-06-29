@@ -90,4 +90,36 @@ console.log(fizzBuzz());
     }  
     primeFactors(600851475143);
 ```
+```js
 ####Added the movie app but build it with angular
+// var will = 4+4;
+// console.log(will);
+// function check(){
+
+// if((will) === 8){
+// 	return true
+// }else{
+// return false;	
+// }}
+
+// check();
+
+// var dataStatus;
+// function checkStatus(){
+//   if(button.data-status == "nonmember"){
+//   	dataStatus = true;
+//   }else{
+//     dataStatus = false;
+//   }
+// }
+// return dataStatus;
+
+function dataStatus(){
+  if(button.data-status == "nonmember"){
+  	return true;
+  }else{
+    return false;
+  }
+}
+dataStatus();
+```
